@@ -40,3 +40,8 @@ The app was built using the following tools:
 * Thanks to Apollo's in-memory cache there's no need to introduce additional state management solutions. We request the same piece of data for document and artboard views, but the actual XHR call happens only once when navigating from one page to another. Also, there's no global shared state that would require introducing more complex solutions or relying on Context API.
 * Labels are kept separately from components. To define more string-based labels that could be translated when needed, extend the `src/i18n/index.js`
 * `src/ui` could work as a set of feature-agnostic ui components - due to a low complexity of the app, right now it's just a foundation for possible enhancements in this area.
+
+### Todo
+
+* tests - either unit tests covering individual components, or more general integration tests to cover longer scenarios
+* browser compatibility - making sure that fallbacks for features like CSS Grid are introduced and work properly (if needed)
