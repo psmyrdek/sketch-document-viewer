@@ -24,12 +24,12 @@ const ActionButtons = styled.div`
   }
 `;
 
-const ArtboardHeader = ({ index, itemsTotal, onPrev, onNext }) => {
+const ArtboardHeader = ({ index, itemsTotal, onClose, onPrev, onNext }) => {
   return (
     <ArtboardHeaderWrapper>
-      <Link to='../..'>
+      <Button transparent onClick={() => onClose()}>
         <img src={Close} alt='Close preview' />
-      </Link>
+      </Button>
       <ActionButtons>
         {index > 0 && (
           <Button transparent onClick={() => onPrev()}>
