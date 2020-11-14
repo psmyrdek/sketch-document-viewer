@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import SketchLogo from './assets/sketch-logo.svg';
 import { Link } from '@reach/router';
+import I18n from '../i18n';
 
 const PageHeader = styled.header`
   background: white;
@@ -19,7 +20,7 @@ const PageTitle = styled.p`
 const Header = ({title}) => (
   <PageHeader>
     <Link to='/'>
-      <img src={SketchLogo} alt='Sketch logo' />
+      <img src={SketchLogo} alt={I18n.common.header} />
     </Link>
     <PageTitle>{title}</PageTitle>
   </PageHeader>

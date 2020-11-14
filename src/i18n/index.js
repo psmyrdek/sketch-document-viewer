@@ -3,6 +3,9 @@ const I18n = {
         loading: 'Fetching data...',
         error: 'An unexpected error occurred. Please try again in a while.'
     },
+    common: {
+        header: 'Back to homepage'
+    },
     home: {
         header: 'Please provide the document id (shortId)',
         cta: 'Open'

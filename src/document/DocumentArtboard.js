@@ -41,7 +41,7 @@ const DocumentArtboard = ({artboard}) => {
         <Link to={`artboard/${artboard.id}`} style={{textDecoration: 'none'}}>
             <DocumentArtboardCard>
                 <DocumentArtboardContent>
-                    <DocumentArtboardImg loading={'lazy'} src={url} alt='Artboard preview'/>
+                    <DocumentArtboardImg loading={'lazy'} src={url} alt={artboard.name}/>
                 </DocumentArtboardContent>
                 <DocumentArtboardName>{artboard.name}</DocumentArtboardName>
             </DocumentArtboardCard>
