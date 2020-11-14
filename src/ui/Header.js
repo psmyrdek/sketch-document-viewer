@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import SketchLogo from '../assets/sketch-logo.svg';
+import SketchLogo from './assets/sketch-logo.svg';
 import { Link } from '@reach/router';
 
 const PageHeader = styled.header`
@@ -16,7 +16,7 @@ const PageTitle = styled.p`
   margin-left: 10px;
 `;
 
-export const Header = ({title}) => (
+const Header = ({title}) => (
   <PageHeader>
     <Link to='/'>
       <img src={SketchLogo} alt='Sketch logo' />

@@ -9,6 +9,7 @@ export const DocumentQuery = gql`
           name
           artboards {
             entries {
+              id
               name
               isArtboard
               files {

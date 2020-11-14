@@ -8,8 +8,8 @@ const App = () => (
     <div>
         <Router>
             <Home path="/" />
-            <Document path="document/:shortId" />
-            <Artboard path="document/:shortId/artboard/:id" />
+            <Document path="document/:documentId" />
+            <Artboard path="document/:documentId/artboard/:artboardId" />
         </Router>
     </div>
 );
