@@ -3,6 +3,7 @@ import { Link } from '@reach/router';
 import Button from '../ui/Button';
 import { TextInput } from '../ui/Forms';
 import styled from 'styled-components';
+import I18n from '../i18n';
 
 const SelectorWrapper = styled.div`
   display: flex;
@@ -50,7 +51,7 @@ const DocumentSelector = () => {
   return (
     <SelectorWrapper>
       <div>
-        <h3>Please provide the document id (shortId)</h3>
+        <h3>{I18n.home.header}</h3>
         <SelectorContent>
           <TextInput
             required
@@ -60,7 +61,7 @@ const DocumentSelector = () => {
           />
           <Link to={`/document/${shortId}`}>
             <Button primary disabled={!Boolean(shortId)}>
-              Open Document
+              {I18n.home.cta}
             </Button>
           </Link>
         </SelectorContent>

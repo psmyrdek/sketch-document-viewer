@@ -3,8 +3,8 @@ import LeftArr from './assets/arrow-left.svg';
 import RightArr from './assets/arrow-right.svg';
 import Breadcrumb from './assets/breadcrumb.svg';
 import styled from 'styled-components';
-import { Link } from '@reach/router';
 import Button from '../ui/Button';
+import I18n from '../i18n';
 
 const ArtboardHeaderWrapper = styled.header`
   background: white;
@@ -28,12 +28,12 @@ const ArtboardHeader = ({ index, itemsTotal, onClose, onPrev, onNext }) => {
   return (
     <ArtboardHeaderWrapper>
       <Button transparent onClick={() => onClose()}>
-        <img src={Close} alt='Close preview' />
+        <img src={Close} alt={I18n.artboard.actions.close} />
       </Button>
       <ActionButtons>
         {index > 0 && (
           <Button transparent onClick={() => onPrev()}>
-            <img src={LeftArr} alt='Show previous artboard' />
+            <img src={LeftArr} alt={I18n.artboard.actions.prev} />
           </Button>
         )}
         <span>{index + 1}</span>
@@ -41,7 +41,7 @@ const ArtboardHeader = ({ index, itemsTotal, onClose, onPrev, onNext }) => {
         <span>{itemsTotal}</span>
         {index < itemsTotal - 1 && (
           <Button transparent onClick={() => onNext()}>
-            <img src={RightArr} alt='Show next artboard' />
+            <img src={RightArr} alt={I18n.artboard.actions.next} />
           </Button>
         )}
       </ActionButtons>
