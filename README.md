@@ -32,7 +32,7 @@ The app was built using the following tools:
 * `@reach/router` - simple declarative routing
 * `Apollo` - communicating with Sketch API (GraphQL)
 * `styled-components` - styling
-* `Prettier` - formatting
+* `Prettier` - code formatting
 
 ### Key concepts
 
