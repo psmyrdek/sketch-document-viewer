@@ -46,3 +46,16 @@ The app was built using the following tools:
 
 * tests - either unit tests covering individual components, or more general integration tests to cover longer scenarios
 * browser compatibility - making sure that fallbacks for features like CSS Grid are introduced and work properly (if needed)
+
+### Hacks
+
+* Calculating `ArtboardPreviewFrame` height in `ArtboardPreview.js` is far from elegant - I had to introduce absolutely-positioned div to introduce full height container, and later on I'm subtracting header's height to calculate artboard viewport. Thanks to component-based architecture, tho, this complexity is local and should be improved over time.
+
+
+### Tested on
+
+Desktop:
+
+* Chrome 86
+* Safari 14
+* Firefox 82

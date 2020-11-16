@@ -1,13 +1,16 @@
 import styled from 'styled-components';
 
-const ArtboardPreviewWrapper = styled.div`
+const HEADER_HEIGHT = '65px';
+
+const ArtboardPreviewFrame = styled.div`
+    position: absolute;
+    width: 100%;
+    height: calc(100% - ${HEADER_HEIGHT});
+    left: 0;
 `
 
-const ArtboardImg = styled.div`
-    height: calc(100vh - 78px);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+const ArtboardImg = styled.img`
+    max-height: 100%;
     display: block;
     margin: 0 auto;
 `
@@ -18,9 +21,9 @@ export const ArtboardPreview = ({artboard}) => {
     const {url: artboardUrl} = lastFile.thumbnails[lastFile.thumbnails.length - 1];
 
     return (
-        <ArtboardPreviewWrapper>
-            <ArtboardImg style={{backgroundImage: `url(${artboardUrl})`}}></ArtboardImg>
-        </ArtboardPreviewWrapper>
+        <ArtboardPreviewFrame>
+            <ArtboardImg src={artboardUrl} />
+        </ArtboardPreviewFrame>
     )
 }
 
